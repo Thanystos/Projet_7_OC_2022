@@ -1,6 +1,11 @@
 import { createGlobalStyle } from "styled-components";
+import MontserratTtf from '../../assets/polices/Montserrat-Regular.ttf';
 
 const StyledGlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: 'Montserrat-Regular';
+        src: url(${MontserratTtf});
+    }
     * {
         font-family: 'Montserrat-Regular';
         font-weight: 500;

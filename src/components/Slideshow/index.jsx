@@ -43,6 +43,7 @@ const SlideNumber = styled.div`
     bottom: 24.92px;
     right: 607px;
     color: white;
+    display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
 `
 
 function Slideshow({ pictures }) {
@@ -67,7 +68,7 @@ function Slideshow({ pictures }) {
                 <SlideImg src={ pictures[index] } />
             }
             <SlideNext src={next} pictures={pictures} onClick={ () => goToNext() }/>
-            <SlideNumber>
+            <SlideNumber pictures={pictures}>
                 {index + 1}/{pictures.length}
             </SlideNumber>
 

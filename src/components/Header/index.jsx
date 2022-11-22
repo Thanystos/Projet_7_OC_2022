@@ -24,7 +24,6 @@ const StyledLinkContainer = styled.div`
 const NavLink = styled.div`
     display: flex;
     justify-content: right;
-    width: 309px;
     height: 34px;
     font-size: 24px;
 `

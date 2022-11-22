@@ -8,13 +8,11 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import GlobalStyle from "./utils/style/GlobalStyle"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import FontStyle from "./utils/style/FontStyle"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <FontStyle />
       <GlobalStyle />
       <Header />
       <Routes>

@@ -69,13 +69,13 @@ function DropDown({ title, description, renting }) {
     }
 
     return (
-        <DropDownContainer renting={renting}>
+        <DropDownContainer renting={renting} onClick={() => setIsOpen(!isOpen)}>
             <DropDownHeader renting={renting}>
                 <DropDownTitle>
                     {title}
                 </DropDownTitle>
                 <DropDownArrowContainer>
-                    <DropDownArrow src={isOpen ? arrowUp : arrowDown} onClick={() => setIsOpen(!isOpen)}/>
+                    <DropDownArrow src={isOpen ? arrowUp : arrowDown}/>
                 </DropDownArrowContainer>
             </DropDownHeader>
             <DropDownDescription renting={renting} isOpen={isOpen}>
