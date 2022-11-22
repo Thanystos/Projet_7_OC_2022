@@ -8,7 +8,13 @@ const CardWrapper = styled.div`
     height: 340px;
     border-radius: 10px;
     margin-bottom: 50px;
-
+    background-size: cover;
+    background-image: 
+      linear-gradient(
+        rgba(255, 255, 255, 0), 
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(${({ imgUrl }) => (imgUrl)}); // seul moyen de transmettre une prop à mon css
 `
 
 const CardImage = styled.img`
@@ -31,8 +37,8 @@ const CardTitle = styled.h2`
 
 function Card({ title, cover }) {
     return (
-        <CardWrapper>
-            <CardImage src={cover} alt='renting'/>
+        <CardWrapper imgUrl={cover}>
+            
             <CardTitle>{title}</CardTitle>
         </CardWrapper>
     )

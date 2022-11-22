@@ -20,8 +20,6 @@ const SloganContainer = styled.div`
     justify-content: center;
     align-items: center;
     height: 223px;
-    width: 100%;
-    background-image: url(${ sloganImg });
     border-radius: 25px;
 `
 

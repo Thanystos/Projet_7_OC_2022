@@ -17,6 +17,10 @@ const NavLogo = styled.img`
     height: 68px;
 `
 
+const StyledLinkContainer = styled.div`
+    margin-left: 70px;
+`
+
 const NavLink = styled.div`
     display: flex;
     justify-content: right;
@@ -32,12 +36,16 @@ function Header() {
                 <NavLogo src={navLogo} />
             </Link>
             <NavLink>
-                <StyledLink to="/">
-                    Accueil
-                </StyledLink>
-                <StyledLink to="A-Propos">
-                    A Propos
-                </StyledLink>
+                <StyledLinkContainer>
+                    <StyledLink to="/">
+                        Accueil
+                    </StyledLink>   
+                </StyledLinkContainer>
+                <StyledLinkContainer>
+                    <StyledLink to="A-Propos">
+                        A Propos
+                    </StyledLink>
+                </StyledLinkContainer>   
             </NavLink>
         </NavContainer>
     )

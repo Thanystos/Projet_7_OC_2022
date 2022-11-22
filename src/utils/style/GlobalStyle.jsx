@@ -9,6 +9,15 @@ const StyledGlobalStyle = createGlobalStyle`
     body {
         margin: 0px;
     }
+
+    h1, h2, h3 {
+        margin: 0px;
+    }
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
 `
 
 function GlobalStyle() {

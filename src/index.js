@@ -5,6 +5,7 @@ import Housing from './pages/Housing'
 import PageNotFound from './pages/PageNotFound'
 import About from './pages/About'
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 import GlobalStyle from "./utils/style/GlobalStyle"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import FontStyle from "./utils/style/FontStyle"
@@ -22,6 +23,7 @@ root.render(
         <Route path='A-Propos' element={<About />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>
 );

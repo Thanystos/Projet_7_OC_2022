@@ -6,7 +6,6 @@ import colors from './colors'
 export const StyledLink = styled(Link)`
     text-decoration: none;
     color: #${colors.primary};
-    margin-left: 70px;
     &:hover {
         text-decoration: underline;
     }
