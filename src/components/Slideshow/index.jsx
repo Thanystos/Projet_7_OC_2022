@@ -22,6 +22,7 @@ const SlidePrev = styled.img`
     position: absolute;
     top: 167.9px;
     left: 23.36px;
+    display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
 `
 
 const SlideNext = styled.img`
@@ -30,6 +31,7 @@ const SlideNext = styled.img`
     position: absolute;
     top: 167.9px;
     right: 23.36px;
+    display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
 `
 
 const SlideNumber = styled.div`
@@ -60,11 +62,11 @@ function Slideshow({ pictures }) {
 
     return (
         <SlideContainer>
-            <SlidePrev src={prev} onClick={ () => goToPrevious() }/>
+            <SlidePrev src={prev} pictures={pictures} onClick={() => goToPrevious()}/>
             {
                 <SlideImg src={ pictures[index] } />
             }
-            <SlideNext src={next} onClick={ () => goToNext() }/>
+            <SlideNext src={next} pictures={pictures} onClick={ () => goToNext() }/>
             <SlideNumber>
                 {index + 1}/{pictures.length}
             </SlideNumber>

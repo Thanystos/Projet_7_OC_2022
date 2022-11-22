@@ -17,13 +17,6 @@ const CardWrapper = styled.div`
       url(${({ imgUrl }) => (imgUrl)}); // seul moyen de transmettre une prop à mon css
 `
 
-const CardImage = styled.img`
-    object-fit: cover;
-    border-radius: 10px;
-    width: 340px;
-    height: 340px;
-`
-
 const CardTitle = styled.h2`
     width: 300px;
     height: 52px;
@@ -38,7 +31,6 @@ const CardTitle = styled.h2`
 function Card({ title, cover }) {
     return (
         <CardWrapper imgUrl={cover}>
-            
             <CardTitle>{title}</CardTitle>
         </CardWrapper>
     )
