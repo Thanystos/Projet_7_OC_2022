@@ -6,6 +6,7 @@ import DropDown from '../../components/Dropdown';
 import colors from '../../utils/style/colors'
 import emptiedStar from '../../assets/images/emptiedStar.png'
 import filledStar from '../../assets/images/filledStar.png'
+import { Navigate } from 'react-router-dom';
 
 const RentingWrapper = styled.div`
     display: flex;
@@ -184,6 +185,9 @@ function Housing() {
             )
         }
     }
+    return(
+        <Navigate to="404" />
+    )
     
     
 }
