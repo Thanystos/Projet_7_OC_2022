@@ -7,7 +7,8 @@ const NavContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1240px;
+    width: calc(100% - 200px);
+    max-width: 1240px;
     height: 68px;
     margin: 40px auto 68px auto;
 `

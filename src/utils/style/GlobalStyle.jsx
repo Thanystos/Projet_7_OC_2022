@@ -15,6 +15,11 @@ const StyledGlobalStyle = createGlobalStyle`
         margin: 0px;
     }
 
+    #root {
+        max-width: 1440px;
+        margin: auto;
+    }
+
     h1, h2, h3 {
         margin: 0px;
     }

@@ -5,7 +5,8 @@ import arrowDown from "../../assets/images/arrowDown.png"
 import arrowUp from "../../assets/images/arrowUp.png"
 
 const DropDownContainer = styled.div`
-    width: ${({ renting }) => (renting ? '582px' : '1023px')};
+    max-width: ${({ renting }) => (renting ? '582px' : '1023px')};
+    width: 100%;
     border-radius: ${({ renting }) => (renting ? '10px' : '5px')};
     font-size: ${({ renting }) => (renting ? '18px' : '24px')};
     margin-top: ${({ renting }) => (renting ? '0px' : '33px')};

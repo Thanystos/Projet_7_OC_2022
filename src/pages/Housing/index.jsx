@@ -14,7 +14,7 @@ const RentingWrapper = styled.div`
 `
 
 const RentingContainer = styled.div`
-    width: 1240px;
+    width: calc(100% - 200px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,7 @@ const RentingContainer = styled.div`
 `
 
 const RentingCommonInfos = styled.div`
-    width: 1240px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -101,7 +101,7 @@ const RentingLocationOwnerRatingImg = styled.img`
 `
 
 const DropDownContainer = styled.div`
-    width: 1240px;
+    width: 100%;
     margin-top: 24px;
     display: flex;
     justify-content: space-between;

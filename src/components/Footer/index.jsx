@@ -9,7 +9,8 @@ const FooterContainer = styled.div`
     margin: 50px auto 0px auto;
     padding: 66px 0px 29px 0px;
     background-color: black;
-    width: 1240px;
+    width: 100%;
+    max-width: 1440px;
 `
 
 const FooterLogo = styled.img`

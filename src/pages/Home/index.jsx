@@ -12,7 +12,7 @@ const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1240px;
+    width: calc(100% - 200px);
 `
 
 const SloganContainer = styled.div`
@@ -25,8 +25,10 @@ const SloganContainer = styled.div`
 
 const SloganImg = styled.img`
     filter: brightness(60%);
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 25px;
+    width: 100%;
+    min-height: 111px;
 `
 
 const Slogan = styled.h1`

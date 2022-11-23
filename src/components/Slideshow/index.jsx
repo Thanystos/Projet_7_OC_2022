@@ -4,13 +4,13 @@ import prev from '../../assets/images/next.png'
 import next from '../../assets/images/prev.png'
 
 const SlideContainer = styled.div`
-    width: 1240px;
+    width: 100%;
     height: 415px;
     position: relative;
 `
 
 const SlideImg = styled.img`
-    width: 1240px;
+    width: 100%;
     height: 415px;
     object-fit: cover;
     border-radius: 25px;

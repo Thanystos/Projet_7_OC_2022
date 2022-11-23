@@ -11,25 +11,28 @@ const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1240px;
+    width: calc(100% - 200px);
 `
 
 const AboutImgContainer = styled.div`
     height: 223px;
     border-radius: 25px;
+    width: 100%;
 `
 
 const AboutImg = styled.img`
     filter: brightness(60%);
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 25px;
+    width: 100%;
+    height: 223px;
 `
 
 const DropDownContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1240px;
+    width: 100%;
 `
 
 function About() {
