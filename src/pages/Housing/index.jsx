@@ -6,7 +6,7 @@ import DropDown from '../../components/Dropdown';
 import colors from '../../utils/style/colors'
 import emptiedStar from '../../assets/images/emptiedStar.png'
 import filledStar from '../../assets/images/filledStar.png'
-import { Navigate } from 'react-router-dom';
+import PageNotFound from '../../pages/PageNotFound'
 
 const RentingWrapper = styled.div`
     display: flex;
@@ -19,6 +19,10 @@ const RentingContainer = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 375px) {
+        width: 100%;
+    }
 `
 
 const RentingCommonInfos = styled.div`
@@ -27,6 +31,11 @@ const RentingCommonInfos = styled.div`
     justify-content: space-between;
     margin-top: 30px;
     color: #${colors.primary};
+
+    @media screen and (max-width: 375px) {
+        margin-top: 15px;
+        flex-direction: column;
+    }
 `
 
 const RentingLocationInfos = styled.div`
@@ -38,29 +47,59 @@ const RentingLocationTitle = styled.h2`
     height: 51px;
     font-size: 36px;
     line-height: 51px;
+
+    @media screen and (max-width: 375px) {
+        height: 46px;
+        font-size: 18px;
+        line-height: 25.67px;
+        margin-bottom: 5px;
+    }
 `
 
 const RentingLocationSubtitle = styled.h3`
     height: 26px;
     font-size: 18px;
     line-height: 26px;
+
+    @media screen and (max-width: 375px) {
+        height: 22px;
+        font-size: 14px;
+        line-height: 22px;
+    }
 `
 
 const RentingLocationTags = styled.div`
     display: flex;
     margin-top: 20px;
+
+    @media screen and (max-width: 375px) {
+        margin-top: 10px;
+    }
+
 `
 
 const RentingLocationOwner = styled.div`
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+
+    @media screen and (max-width: 375px) {
+        height: 32px;
+        margin-top: 16.5px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
 `
 
 const RentingLocationOwnerInfos = styled.div`
     display: flex;
     align-items: center;
     height: 64px;
+
+    @media screen and (max-width: 375px) {
+        height: 32px;
+    }    
 `
 
 const RentingLocationOwnerName = styled.div`
@@ -68,11 +107,23 @@ const RentingLocationOwnerName = styled.div`
     font-size: 18px;
     line-height: 52px;
     margin-right: 10px;
+
+    @media screen and (max-width: 375px) {
+        height: 33px;
+        font-size: 12px;
+        line-height: 33px;
+        margin-right: 10.5px;
+    }
 `
 
 const RentingLocationOwnerPictureContainer = styled.div`
     width: 64px;
     height: 64px;
+
+    @media screen and (max-width: 375px) {
+        width: 32px;
+        height: 32px;
+    }
 `
 
 const RentingLocationOwnerPicture = styled.img`
@@ -80,24 +131,45 @@ const RentingLocationOwnerPicture = styled.img`
     height: 64px;
     border-radius: 50%;
     object-fit: contain;
+
+    @media screen and (max-width: 375px) {
+        width: 32px;
+        height: 32px;
+    }
 `
 
 const RentingLocationOwnerRating = styled.div`
     display: flex;
     width: 190px;
-    margin-top: 15px;
+    margin-top: 24px;
+
+    @media screen and (max-width: 375px) {
+        width: 95px;
+        margin-top: 0px;
+    }
 `
 
 const RentingLocationOwnerRatingImgContainer = styled.div`
     width: 30px;
     height: 30px;
     margin-right: 10px;
+
+    @media screen and (max-width: 375px) {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    }
 `
 
 const RentingLocationOwnerRatingImg = styled.img`
     width: 30px;
     height: 30px;
     object-fit: contain;
+
+    @media screen and (max-width: 375px) {
+        width: 15px;
+        height: 15px;
+    }
 `
 
 const DropDownContainer = styled.div`
@@ -105,6 +177,11 @@ const DropDownContainer = styled.div`
     margin-top: 24px;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 375px) {
+        margin-top: 16.5px;
+        flex-direction: column;
+    }
 `
 
 function Housing() {
@@ -185,11 +262,7 @@ function Housing() {
             )
         }
     }
-    return(
-        <Navigate to="404" />
-    )
-    
-    
+    return(<PageNotFound />)
 }
 
 export default Housing

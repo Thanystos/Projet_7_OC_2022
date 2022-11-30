@@ -9,8 +9,12 @@ const DropDownContainer = styled.div`
     width: 100%;
     border-radius: ${({ renting }) => (renting ? '10px' : '5px')};
     font-size: ${({ renting }) => (renting ? '18px' : '24px')};
-    margin-top: ${({ renting }) => (renting ? '0px' : '33px')};
+    margin-bottom: ${({ renting }) => (renting ? '0px' : '31px')};
     
+    @media screen and (max-width: 375px) {
+        margin-bottom: ${({ renting }) => (renting ? '20.07px' : '19px')};
+        font-size: 12px;
+    }
 `
 
 const DropDownHeader = styled.div`
@@ -21,6 +25,11 @@ const DropDownHeader = styled.div`
     border-radius: ${({ renting }) => (renting ? '10px' : '5px')};
     height: ${({ renting }) => (renting ? '52px' : '47px')};
     line-height: ${({ renting }) => (renting ? '52px' : '47px')};
+
+    @media screen and (max-width: 375px) {
+        height: 30px;
+        line-height: 30px;
+    }
 `
 
 const DropDownTitle = styled.h3`
@@ -51,6 +60,10 @@ const DropDownDescription = styled.div`
     padding: 40px 12px 53px 20px;
     z-index: -1;
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+
+    @media screen and (max-width: 375px) {
+        padding: 23.02px 6.91px 1.3px 11.51px;
+    }
 `
 
 const DropDownEquipments = styled.ul`

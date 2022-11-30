@@ -10,11 +10,17 @@ const CardWrapper = styled.div`
     margin-bottom: 50px;
     background-size: cover;
     background-image: 
-      linear-gradient(
-        rgba(255, 255, 255, 0), 
-        rgba(0, 0, 0, 0.5)
-      ),
-      url(${({ imgUrl }) => (imgUrl)}); // seul moyen de transmettre une prop à mon css
+        linear-gradient(
+            rgba(255, 255, 255, 0), 
+            rgba(0, 0, 0, 0.5)
+        ),
+        url(${({ imgUrl }) => (imgUrl)}); // seul moyen de transmettre une prop à mon css
+
+        @media screen and (max-width: 375px) {
+            width: 335px;
+            height: 255px;
+            margin-bottom: 20px;
+        }
 `
 
 const CardTitle = styled.h2`

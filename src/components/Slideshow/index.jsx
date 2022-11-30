@@ -7,6 +7,10 @@ const SlideContainer = styled.div`
     width: 100%;
     height: 415px;
     position: relative;
+
+    @media screen and (max-width: 375px) {
+        height: 255px;
+    }
 `
 
 const SlideImg = styled.img`
@@ -14,6 +18,10 @@ const SlideImg = styled.img`
     height: 415px;
     object-fit: cover;
     border-radius: 25px;
+
+    @media screen and (max-width: 375px) {
+        height: 255px;
+    }
 `
 
 const SlidePrev = styled.img`
@@ -23,6 +31,12 @@ const SlidePrev = styled.img`
     top: 167.9px;
     left: 23.36px;
     display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
+
+    @media screen and (max-width: 375px) {
+        width: 11.67px;
+        height: 19.8px;
+        top: 117.6px
+    }
 `
 
 const SlideNext = styled.img`
@@ -32,6 +46,12 @@ const SlideNext = styled.img`
     top: 167.9px;
     right: 23.36px;
     display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
+
+    @media screen and (max-width: 375px) {
+        width: 11.67px;
+        height: 19.8px;
+        top: 117.6px
+    }
 `
 
 const SlideNumber = styled.div`
@@ -41,7 +61,7 @@ const SlideNumber = styled.div`
     text-align: center;
     position: absolute;
     bottom: 24.92px;
-    right: 607px;
+    right: 48%;
     color: white;
     display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
 `

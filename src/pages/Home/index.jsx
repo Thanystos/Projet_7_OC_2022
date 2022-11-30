@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import sloganImg from '../../assets/images/sloganImg.png'
 import Card from '../../components/Card'
+import colors from '../../utils/style/colors'
 
 const HomeWrapper = styled.div`
     display: flex;
@@ -13,14 +14,24 @@ const HomeContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: calc(100% - 200px);
+
+    @media screen and (max-width: 375px) {
+        width: 100%;
+    }
 `
 
 const SloganContainer = styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 223px;
     border-radius: 25px;
+    margin-bottom: 43px;
+
+    @media screen and (max-width: 375px) {
+        height: 111px;
+        margin-bottom: 22px;
+    }
 `
 
 const SloganImg = styled.img`
@@ -29,15 +40,24 @@ const SloganImg = styled.img`
     border-radius: 25px;
     width: 100%;
     min-height: 111px;
+    
+    @media screen and (max-width: 375px) {
+        height: 111px;
+    }
 `
 
 const Slogan = styled.h1`
     position: absolute;
     color: white;
-    width: 705px;
-    height: 68px;
     font-size: 48px;
     text-align: center;
+
+    @media screen and (max-width: 375px) {
+        width: 217px;
+        font-size: 24px;
+        text-align: left;
+        left: 16px;
+    }
 `
 
 const CardsContainer = styled.div.attrs({className: 'test'})`
@@ -47,6 +67,12 @@ const CardsContainer = styled.div.attrs({className: 'test'})`
     width: 100%;
     border-radius: 25px;
     padding: 56px 50px;
+    background-color: #${colors.secondary};
+
+    @media screen and (max-width: 375px) {
+        background-color: white;
+        padding: 0px;
+    }
 `
 
 function Home() {

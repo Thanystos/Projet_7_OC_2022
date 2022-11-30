@@ -10,10 +10,20 @@ const TagContainer = styled.div`
     color: white;
     text-align: center;
     line-height: 25px;
+
+    @media screen and (max-width: 375px) {
+        width: 84px;
+        height: 18px;
+        line-height: 18px;
+    }
 `
 
 const TagTitle = styled.h3`
     font-size: 14px;
+
+    @media screen and (max-width: 375px) {
+        font-size: 10px;
+    }
 `
 
 function Tag({ title }) {

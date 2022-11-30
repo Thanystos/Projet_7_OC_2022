@@ -14,18 +14,38 @@ const NotFoundCode = styled.h1`
     line-height: 263px;
     font-size: 288px;
     font-weight: 700;
+    margin-top: 111.97px;
     margin-bottom: 66px;
+
+    @media screen and (max-width: 375px) {
+        height: 99px;
+        line-height: 99px;
+        font-size: 96px;
+        margin-top: 135.71;
+        margin-bottom: 11px;
+    }
 `
 
 const NotFoundMessage = styled.h2`
     height: 51px;
-    line-height: 51px;
+    line-height: 25.67px;
     font-size: 36px;
     margin-bottom: 182px;
+    text-align: center;
+
+    @media screen and (max-width: 375px) {
+        width: 260px;
+        font-size: 18px;
+        margin-bottom: 133px;
+    }
 `
 
 const StyledLinkContainer = styled.div`
     font-size: 18px;
+
+    @media screen and (max-width: 375px) {
+        font-size: 14px;
+    }
 `
 
 function PageNotFound() {

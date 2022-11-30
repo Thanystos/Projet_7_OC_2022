@@ -13,11 +13,16 @@ const StyledGlobalStyle = createGlobalStyle`
 
     body {
         margin: 0px;
+        height: 100vh;
     }
 
     #root {
         max-width: 1440px;
         margin: auto;
+
+        @media screen and (max-width: 375px) {
+            width: 335px;
+        }
     }
 
     h1, h2, h3 {

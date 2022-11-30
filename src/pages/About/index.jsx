@@ -12,6 +12,10 @@ const AboutContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: calc(100% - 200px);
+    
+    @media screen and (max-width: 375px) {
+        width: 335px;
+    }
 `
 
 const AboutImgContainer = styled.div`
@@ -32,7 +36,13 @@ const DropDownContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 200px);
+    margin-top: 31px;
+
+    @media screen and (max-width: 375px) {
+        width: 100%;
+        margin-top: 19px;
+    }
 `
 
 function About() {

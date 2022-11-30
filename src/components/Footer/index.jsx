@@ -11,6 +11,13 @@ const FooterContainer = styled.div`
     background-color: black;
     width: 100%;
     max-width: 1440px;
+
+    @media screen and (max-width: 375px) {
+        padding: 62px 0px 62px 0px;
+        min-width: 375px;
+        position: relative;
+        left: -20px
+    }
 `
 
 const FooterLogo = styled.img`
@@ -23,6 +30,10 @@ const FooterRights = styled.div`
     line-height: 46px;
     font-size: 24px;
     color: white;
+
+    @media screen and (max-width: 375px) {
+            font-size: 12px;
+    }
 `
 
 function Footer() {
