@@ -15,8 +15,8 @@ const HomeContainer = styled.div`
     align-items: center;
     width: calc(100% - 200px);
 
-    @media screen and (max-width: 375px) {
-        width: 100%;
+    @media screen and (max-width: 635px) {
+        width: 335px;
     }
 `
 
@@ -27,8 +27,9 @@ const SloganContainer = styled.div`
     align-items: center;
     border-radius: 25px;
     margin-bottom: 43px;
+    min-width: 335px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         height: 111px;
         margin-bottom: 22px;
     }
@@ -41,7 +42,7 @@ const SloganImg = styled.img`
     width: 100%;
     min-height: 111px;
     
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         height: 111px;
     }
 `
@@ -52,26 +53,38 @@ const Slogan = styled.h1`
     font-size: 48px;
     text-align: center;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         width: 217px;
-        font-size: 24px;
         text-align: left;
         left: 16px;
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        font-size: 32px;
     }
 `
 
 const CardsContainer = styled.div.attrs({className: 'test'})`
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: calc(100% - 100px);
+    min-width: 235px;
     border-radius: 25px;
     padding: 56px 50px;
     background-color: #${colors.secondary};
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         background-color: white;
         padding: 0px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        justify-content: space-between;
     }
 `
 

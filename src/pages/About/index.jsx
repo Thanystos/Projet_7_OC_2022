@@ -12,8 +12,9 @@ const AboutContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: calc(100% - 200px);
+    min-width: 335px;
     
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         width: 335px;
     }
 `
@@ -37,9 +38,10 @@ const DropDownContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: calc(100% - 200px);
+    min-width: 335px;
     margin-top: 31px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         width: 100%;
         margin-top: 19px;
     }

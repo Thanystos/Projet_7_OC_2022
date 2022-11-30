@@ -5,15 +5,23 @@ import arrowDown from "../../assets/images/arrowDown.png"
 import arrowUp from "../../assets/images/arrowUp.png"
 
 const DropDownContainer = styled.div`
-    max-width: ${({ renting }) => (renting ? '582px' : '1023px')};
+    max-width: ${({ renting }) => (renting ? '700px' : '1023px')};
     width: 100%;
     border-radius: ${({ renting }) => (renting ? '10px' : '5px')};
     font-size: ${({ renting }) => (renting ? '18px' : '24px')};
     margin-bottom: ${({ renting }) => (renting ? '0px' : '31px')};
     
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 900px) {
         margin-bottom: ${({ renting }) => (renting ? '20.07px' : '19px')};
         font-size: 12px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: 900px) {
+        width: ${({ renting }) => (renting ? 'calc(50% - 38px)' : '100%')}; ;
     }
 `
 
@@ -26,7 +34,7 @@ const DropDownHeader = styled.div`
     height: ${({ renting }) => (renting ? '52px' : '47px')};
     line-height: ${({ renting }) => (renting ? '52px' : '47px')};
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         height: 30px;
         line-height: 30px;
     }
@@ -61,7 +69,7 @@ const DropDownDescription = styled.div`
     z-index: -1;
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         padding: 23.02px 6.91px 1.3px 11.51px;
     }
 `

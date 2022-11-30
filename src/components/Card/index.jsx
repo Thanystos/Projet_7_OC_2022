@@ -16,7 +16,7 @@ const CardWrapper = styled.div`
         ),
         url(${({ imgUrl }) => (imgUrl)}); // seul moyen de transmettre une prop à mon css
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 635px) {
             width: 335px;
             height: 255px;
             margin-bottom: 20px;

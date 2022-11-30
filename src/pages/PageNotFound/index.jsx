@@ -17,7 +17,7 @@ const NotFoundCode = styled.h1`
     margin-top: 111.97px;
     margin-bottom: 66px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         height: 99px;
         line-height: 99px;
         font-size: 96px;
@@ -33,7 +33,7 @@ const NotFoundMessage = styled.h2`
     margin-bottom: 182px;
     text-align: center;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         width: 260px;
         font-size: 18px;
         margin-bottom: 133px;
@@ -43,7 +43,7 @@ const NotFoundMessage = styled.h2`
 const StyledLinkContainer = styled.div`
     font-size: 18px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         font-size: 14px;
     }
 `

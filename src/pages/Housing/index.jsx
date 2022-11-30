@@ -20,8 +20,8 @@ const RentingContainer = styled.div`
     align-items: center;
     margin-bottom: 50px;
 
-    @media screen and (max-width: 375px) {
-        width: 100%;
+    @media screen and (max-width: 635px) {
+        width: 335px;
     }
 `
 
@@ -32,7 +32,7 @@ const RentingCommonInfos = styled.div`
     margin-top: 30px;
     color: #${colors.primary};
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 900px) {
         margin-top: 15px;
         flex-direction: column;
     }
@@ -48,11 +48,18 @@ const RentingLocationTitle = styled.h2`
     font-size: 36px;
     line-height: 51px;
 
-    @media screen and (max-width: 375px) {
-        height: 46px;
+    @media screen and (max-width: 635px) {
         font-size: 18px;
-        line-height: 25.67px;
+        height: 46px;
         margin-bottom: 5px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 1350px) {
+        font-size: 22px;
+    }
+
+    @media screen and (max-width: 1350px) {
+        line-height: 25.67px;
     }
 `
 
@@ -61,10 +68,14 @@ const RentingLocationSubtitle = styled.h3`
     font-size: 18px;
     line-height: 26px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         height: 22px;
         font-size: 14px;
         line-height: 22px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        font-size: 18px;    
     }
 `
 
@@ -72,7 +83,7 @@ const RentingLocationTags = styled.div`
     display: flex;
     margin-top: 20px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 900px) {
         margin-top: 10px;
     }
 
@@ -83,7 +94,7 @@ const RentingLocationOwner = styled.div`
     align-items: flex-end;
     flex-direction: column;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 900px) {
         height: 32px;
         margin-top: 16.5px;
         flex-direction: row-reverse;
@@ -97,7 +108,7 @@ const RentingLocationOwnerInfos = styled.div`
     align-items: center;
     height: 64px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 900px) {
         height: 32px;
     }    
 `
@@ -108,11 +119,15 @@ const RentingLocationOwnerName = styled.div`
     line-height: 52px;
     margin-right: 10px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         height: 33px;
         font-size: 12px;
         line-height: 33px;
         margin-right: 10.5px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        font-size: 16px;
     }
 `
 
@@ -120,9 +135,14 @@ const RentingLocationOwnerPictureContainer = styled.div`
     width: 64px;
     height: 64px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 900px) {
         width: 32px;
         height: 32px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        width: 48px;
+        height: 48px;
     }
 `
 
@@ -132,9 +152,14 @@ const RentingLocationOwnerPicture = styled.img`
     border-radius: 50%;
     object-fit: contain;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         width: 32px;
         height: 32px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        width: 48px;
+        height: 48px;
     }
 `
 
@@ -143,7 +168,7 @@ const RentingLocationOwnerRating = styled.div`
     width: 190px;
     margin-top: 24px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 900px) {
         width: 95px;
         margin-top: 0px;
     }
@@ -154,9 +179,15 @@ const RentingLocationOwnerRatingImgContainer = styled.div`
     height: 30px;
     margin-right: 10px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         width: 15px;
         height: 15px;
+        margin-right: 5px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        width: 22.5px;
+        height: 22.5px;
         margin-right: 5px;
     }
 `
@@ -166,9 +197,15 @@ const RentingLocationOwnerRatingImg = styled.img`
     height: 30px;
     object-fit: contain;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 900px) {
         width: 15px;
         height: 15px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px){
+        width: 22.5px;
+        height: 22.5px;
+        margin-right: 5px;
     }
 `
 
@@ -178,7 +215,7 @@ const DropDownContainer = styled.div`
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 900px) {
         margin-top: 16.5px;
         flex-direction: column;
     }

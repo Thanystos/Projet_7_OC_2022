@@ -11,7 +11,7 @@ const TagContainer = styled.div`
     text-align: center;
     line-height: 25px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         width: 84px;
         height: 18px;
         line-height: 18px;
@@ -21,7 +21,7 @@ const TagContainer = styled.div`
 const TagTitle = styled.h3`
     font-size: 14px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         font-size: 10px;
     }
 `

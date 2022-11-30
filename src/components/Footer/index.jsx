@@ -12,11 +12,9 @@ const FooterContainer = styled.div`
     width: 100%;
     max-width: 1440px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         padding: 62px 0px 62px 0px;
         min-width: 375px;
-        position: relative;
-        left: -20px
     }
 `
 
@@ -31,8 +29,12 @@ const FooterRights = styled.div`
     font-size: 24px;
     color: white;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
             font-size: 12px;
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        font-size: 18px;
     }
 `
 

@@ -5,11 +5,13 @@ import next from '../../assets/images/prev.png'
 
 const SlideContainer = styled.div`
     width: 100%;
+    min-width: 335px;
     height: 415px;
     position: relative;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         height: 255px;
+        width: 335px;
     }
 `
 
@@ -19,7 +21,7 @@ const SlideImg = styled.img`
     object-fit: cover;
     border-radius: 25px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         height: 255px;
     }
 `
@@ -32,10 +34,16 @@ const SlidePrev = styled.img`
     left: 23.36px;
     display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         width: 11.67px;
         height: 19.8px;
         top: 117.6px
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        width: 18.90px;
+        height: 32.07px;
+        top: 191.465px
     }
 `
 
@@ -47,10 +55,16 @@ const SlideNext = styled.img`
     right: 23.36px;
     display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 635px) {
         width: 11.67px;
         height: 19.8px;
         top: 117.6px
+    }
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        width: 18.90px;
+        height: 32.07px;
+        top: 191.465px
     }
 `
 
