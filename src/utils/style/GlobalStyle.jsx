@@ -17,7 +17,7 @@ const StyledGlobalStyle = createGlobalStyle`
 
     body {
         margin: 0px;
-        padding-bottom: 263px;
+        //padding-bottom: 263px;
         min-height: 100%;
         position: relative;
     }

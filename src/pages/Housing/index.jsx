@@ -11,6 +11,10 @@ import PageNotFound from '../../pages/PageNotFound'
 const RentingWrapper = styled.div`
     display: flex;
     justify-content: center;
+
+    @media screen and (min-width: 635px) and (max-width: 900px) {
+        padding-bottom: 263px;
+    }
 `
 
 const RentingContainer = styled.div`

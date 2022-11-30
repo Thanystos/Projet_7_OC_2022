@@ -5,6 +5,10 @@ import aboutImg from "../../assets/images/aboutImg.png"
 const AboutWrapper = styled.div`
     display: flex;
     justify-content: center;
+
+    @media screen and (min-width: 635px) {
+        padding-bottom: 263px;
+    }
 `
 
 const AboutContainer = styled.div`

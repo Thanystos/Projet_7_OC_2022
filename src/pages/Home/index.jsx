@@ -7,6 +7,7 @@ import colors from '../../utils/style/colors'
 const HomeWrapper = styled.div`
     display: flex;
     justify-content: center;
+    padding-bottom: 263px;
 `
 
 const HomeContainer = styled.div`
