@@ -11,6 +11,8 @@ const FooterContainer = styled.div`
     background-color: black;
     width: 100%;
     max-width: 1440px;
+    position: absolute;
+        bottom: 0;
 
     @media screen and (max-width: 635px) {
         padding: 62px 0px 62px 0px;

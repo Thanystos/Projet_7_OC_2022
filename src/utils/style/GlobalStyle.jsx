@@ -11,9 +11,15 @@ const StyledGlobalStyle = createGlobalStyle`
         font-weight: 500;
     }
 
+    html {
+        height: 100%;
+    }
+
     body {
         margin: 0px;
-        height: 100vh;
+        padding-bottom: 263px;
+        min-height: 100%;
+        position: relative;
     }
 
     #root {
