@@ -226,84 +226,84 @@ const DropDownContainer = styled.div`
 `
 
 function Housing() {
-    const { id: rentingId } = useParams();
-    const rentingsList = require('../../assets/logements.json');
+    const rentingId = useParams().id;
+    const rentings = require('../../assets/logements.json');
+    const renting = rentings.find((renting) => renting.id === rentingId)
     const stars = [];
-    
-    for(let value of rentingsList) {
-        if(value.id === rentingId) {
-            for(let i=0; i<(value.rating); i++ ) {
-                stars[i] = filledStar;
-            }
-            for(let i=0; i<5; i++ ) {
-                if(stars[i] !== filledStar) {
-                    stars[i] = emptiedStar;
-                }
-            }
-            return (
-                <RentingWrapper>
-                    <RentingContainer>
-                        <Slideshow 
-                            pictures={value.pictures}
-                        />
-                        <RentingCommonInfos>
-                            <RentingLocationInfos>
-                                <RentingLocationTitle>
-                                    {value.title}
-                                </RentingLocationTitle>
-                                <RentingLocationSubtitle>
-                                    {value.location}
-                                </RentingLocationSubtitle>
-                                <RentingLocationTags>
-                                    {
-                                        (value.tags).map((tag, index) => (
-                                            <Tag 
-                                                key={index}
-                                                title={tag}
-                                            />
-                                        ))
-                                    }
-                                </RentingLocationTags>
-                            </RentingLocationInfos>
-                            <RentingLocationOwner>
-                                <RentingLocationOwnerInfos>
-                                    <RentingLocationOwnerName>
-                                        {value.host.name}
-                                    </RentingLocationOwnerName>
-                                    <RentingLocationOwnerPictureContainer>
-                                        <RentingLocationOwnerPicture src={value.host.picture} />
-                                    </RentingLocationOwnerPictureContainer>
-                                </RentingLocationOwnerInfos>
-                                <RentingLocationOwnerRating>
-                                    {
-                                        (stars).map((star, index) => (
-                                            <RentingLocationOwnerRatingImgContainer key={index}>
-                                                <RentingLocationOwnerRatingImg key={index} src={star}/>
-                                            </RentingLocationOwnerRatingImgContainer>
-                                        ))  
-                                    } 
-                                    </RentingLocationOwnerRating>
-                            </RentingLocationOwner>
-                        </RentingCommonInfos>
-                        <DropDownContainer>
-                            <DropDown
-                                title = 'Description'
-                                description={value.description}
-                                renting={true}
-                            />
-                            <DropDown
-                                title = 'Équipements'
-                                description={value.equipments}
-                                renting={true}
-                            />
-                        </DropDownContainer>
-                        
-                    </RentingContainer>
-                </RentingWrapper>
-            )
-        }
+
+    if(renting === undefined) {
+        return(<PageNotFound />)
     }
-    return(<PageNotFound />)
-}
+    else {
+        for(let i=0; i<(renting.rating); i++ ) {
+            stars[i] = filledStar;
+        }
+        for(let i=0; i<5; i++ ) {
+            if(stars[i] !== filledStar) {
+                stars[i] = emptiedStar;
+            }
+        }
+        return (
+            <RentingWrapper>
+                <RentingContainer>
+                    <Slideshow 
+                        pictures={renting.pictures}
+                    />
+                    <RentingCommonInfos>
+                        <RentingLocationInfos>
+                            <RentingLocationTitle>
+                                {renting.title}
+                            </RentingLocationTitle>
+                            <RentingLocationSubtitle>
+                                {renting.location}
+                            </RentingLocationSubtitle>
+                            <RentingLocationTags>
+                                {
+                                    (renting.tags).map((tag, index) => (
+                                        <Tag 
+                                            key={index}
+                                            title={tag}
+                                        />
+                                    ))
+                                }
+                            </RentingLocationTags>
+                        </RentingLocationInfos>
+                        <RentingLocationOwner>
+                            <RentingLocationOwnerInfos>
+                                <RentingLocationOwnerName>
+                                    {renting.host.name}
+                                </RentingLocationOwnerName>
+                                <RentingLocationOwnerPictureContainer>
+                                    <RentingLocationOwnerPicture src={renting.host.picture} />
+                                </RentingLocationOwnerPictureContainer>
+                            </RentingLocationOwnerInfos>
+                            <RentingLocationOwnerRating>
+                                {
+                                    (stars).map((star, index) => (
+                                        <RentingLocationOwnerRatingImgContainer key={index}>
+                                            <RentingLocationOwnerRatingImg key={index} src={star}/>
+                                        </RentingLocationOwnerRatingImgContainer>
+                                    ))  
+                                } 
+                                </RentingLocationOwnerRating>
+                        </RentingLocationOwner>
+                    </RentingCommonInfos>
+                    <DropDownContainer>
+                        <DropDown
+                            title = 'Description'
+                            description={renting.description}
+                            renting={true}
+                        />
+                        <DropDown
+                            title = 'Équipements'
+                            description={renting.equipments}
+                            renting={true}
+                        />
+                    </DropDownContainer>
+                </RentingContainer>
+            </RentingWrapper>
+        )
+    }
+}    
 
 export default Housing
