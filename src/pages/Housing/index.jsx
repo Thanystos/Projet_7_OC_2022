@@ -4,9 +4,8 @@ import Slideshow from '../../components/Slideshow';
 import Tag from '../../components/Tag';
 import DropDown from '../../components/Dropdown';
 import colors from '../../utils/style/colors'
-import emptiedStar from '../../assets/images/emptiedStar.png'
-import filledStar from '../../assets/images/filledStar.png'
 import PageNotFound from '../../pages/PageNotFound'
+import Star from '../../components/Star';
 
 const RentingWrapper = styled.div`
     display: flex;
@@ -83,7 +82,7 @@ const RentingLocationSubtitle = styled.h3`
     }
 `
 
-const RentingLocationTags = styled.div`
+const TagList = styled.div`
     display: flex;
     margin-top: 20px;
 
@@ -167,49 +166,15 @@ const RentingLocationOwnerPicture = styled.img`
     }
 `
 
-const RentingLocationOwnerRating = styled.div`
+const StarList = styled.div`
     display: flex;
+    justify-content: space-between;
     width: 190px;
     margin-top: 24px;
 
     @media screen and (max-width: 900px) {
         width: 95px;
         margin-top: 0px;
-    }
-`
-
-const RentingLocationOwnerRatingImgContainer = styled.div`
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-
-    @media screen and (max-width: 635px) {
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
-    }
-
-    @media screen and (min-width: 635px) and (max-width: 900px) {
-        width: 22.5px;
-        height: 22.5px;
-        margin-right: 5px;
-    }
-`
-
-const RentingLocationOwnerRatingImg = styled.img`
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-
-    @media screen and (max-width: 900px) {
-        width: 15px;
-        height: 15px;
-    }
-
-    @media screen and (min-width: 635px) and (max-width: 900px){
-        width: 22.5px;
-        height: 22.5px;
-        margin-right: 5px;
     }
 `
 
@@ -229,20 +194,12 @@ function Housing() {
     const rentingId = useParams().id;
     const rentings = require('../../assets/logements.json');
     const renting = rentings.find((renting) => renting.id === rentingId)
-    const stars = [];
+    const stars = [0, 1, 2, 3, 4];
 
     if(renting === undefined) {
         return(<PageNotFound />)
     }
     else {
-        for(let i=0; i<(renting.rating); i++ ) {
-            stars[i] = filledStar;
-        }
-        for(let i=0; i<5; i++ ) {
-            if(stars[i] !== filledStar) {
-                stars[i] = emptiedStar;
-            }
-        }
         return (
             <RentingWrapper>
                 <RentingContainer>
@@ -257,7 +214,7 @@ function Housing() {
                             <RentingLocationSubtitle>
                                 {renting.location}
                             </RentingLocationSubtitle>
-                            <RentingLocationTags>
+                            <TagList>
                                 {
                                     (renting.tags).map((tag, index) => (
                                         <Tag 
@@ -266,7 +223,7 @@ function Housing() {
                                         />
                                     ))
                                 }
-                            </RentingLocationTags>
+                            </TagList>
                         </RentingLocationInfos>
                         <RentingLocationOwner>
                             <RentingLocationOwnerInfos>
@@ -277,15 +234,17 @@ function Housing() {
                                     <RentingLocationOwnerPicture src={renting.host.picture} />
                                 </RentingLocationOwnerPictureContainer>
                             </RentingLocationOwnerInfos>
-                            <RentingLocationOwnerRating>
+                            <StarList>
                                 {
                                     (stars).map((star, index) => (
-                                        <RentingLocationOwnerRatingImgContainer key={index}>
-                                            <RentingLocationOwnerRatingImg key={index} src={star}/>
-                                        </RentingLocationOwnerRatingImgContainer>
-                                    ))  
-                                } 
-                                </RentingLocationOwnerRating>
+                                        <Star
+                                            key={index}
+                                            index={star}
+                                            rating={renting.rating}
+                                        />
+                                    ))
+                                }
+                            </StarList>
                         </RentingLocationOwner>
                     </RentingCommonInfos>
                     <DropDownContainer>

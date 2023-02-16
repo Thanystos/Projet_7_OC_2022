@@ -84,7 +84,7 @@ const DropDownEquipment = styled.li`
 
 function DropDown({ title, description, renting }) {
     let equipments = [];
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(renting);
 
     if(typeof(description) == 'object') {
         equipments = [...description];
@@ -110,10 +110,9 @@ function DropDown({ title, description, renting }) {
                                 </DropDownEquipment>
                             ))}
                         </DropDownEquipments>
-                        : description   
+                        : description
                 }
             </DropDownDescription>
-            
         </DropDownContainer>
     )
 }
