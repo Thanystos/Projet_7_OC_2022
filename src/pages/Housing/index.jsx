@@ -10,10 +10,7 @@ import Star from '../../components/Star';
 const RentingWrapper = styled.div`
     display: flex;
     justify-content: center;
-
-    @media screen and (min-width: 635px) and (max-width: 900px) {
-        padding-bottom: 263px;
-    }
+    padding-bottom: 263px;
 `
 
 const RentingContainer = styled.div`

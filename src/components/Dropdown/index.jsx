@@ -33,6 +33,7 @@ const DropDownHeader = styled.div`
     border-radius: ${({ renting }) => (renting ? '10px' : '5px')};
     height: ${({ renting }) => (renting ? '52px' : '47px')};
     line-height: ${({ renting }) => (renting ? '52px' : '47px')};
+    cursor: pointer;
 
     @media screen and (max-width: 635px) {
         height: 30px;
@@ -91,8 +92,8 @@ function DropDown({ title, description, renting }) {
     }
 
     return (
-        <DropDownContainer renting={renting} onClick={() => setIsOpen(!isOpen)}>
-            <DropDownHeader renting={renting}>
+        <DropDownContainer renting={renting}>
+            <DropDownHeader renting={renting} onClick={() => setIsOpen(!isOpen)}>
                 <DropDownTitle>
                     {title}
                 </DropDownTitle>

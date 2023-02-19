@@ -33,6 +33,7 @@ const SlidePrev = styled.img`
     top: 167.9px;
     left: 23.36px;
     display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
+    cursor: pointer;
 
     @media screen and (max-width: 635px) {
         width: 11.67px;
@@ -54,6 +55,7 @@ const SlideNext = styled.img`
     top: 167.9px;
     right: 23.36px;
     display: ${({ pictures }) => (pictures.length < 2 ? 'none' : 'block')};
+    cursor: pointer;
 
     @media screen and (max-width: 635px) {
         width: 11.67px;
